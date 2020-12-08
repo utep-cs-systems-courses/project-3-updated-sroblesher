@@ -1,0 +1,1128 @@
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+No valid msp430 devices found! Are you sure the MSP430 is connected to the vm (check lsusb)? 
+make: *** [Makefile:18: load] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 854 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o p1_interrupt_handler.o p1_interrupt_handler.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 868 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o p1_interrupt_handler.o p1_interrupt_handler.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 868 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 864 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 868 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o led.o led.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 870 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 870 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o led.o led.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 870 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 866 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 870 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o led.o led.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 870 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 862 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o led.o led.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 870 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o led.o led.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 862 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o led.o led.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 896 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 896 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 896 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o led.o led.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 896 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o led.o led.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 894 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o led.o led.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 894 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 898 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 898 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> cd ..
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos> cd ..
+student@systems-vm:~/Documents/project2-buzblink-sroblesher> cd project/
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf     README.md
+blinkMain.c   stateMachines.c
+blinkMain.o   stateMachines.h
+buzzer.c      stateMachines.o
+buzzer.h      switches.c
+buzzerMain.c  switches.h
+led.c         switches.o
+led.h         wdInterruptHandler.c
+led.o         wdInterruptHandler.o
+Makefile
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf     README.md
+blinkMain.c   stateMachines.c
+blinkMain.o   stateMachines.h
+buzzer.c      stateMachines.o
+buzzer.h      switches.c
+buzzerMain.c  switches.h
+led.c         switches.o
+led.h         wdInterruptHandler.c
+led.o         wdInterruptHandler.o
+Makefile
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> cd ..
+student@systems-vm:~/Documents/project2-buzblink-sroblesher> ls
+demos  hello.c  new_demos  README.md  timerLib
+h      lib      project    src
+student@systems-vm:~/Documents/project2-buzblink-sroblesher> cp -r ./demos/button_demo/p1_interrupt_handler.c ./project/
+student@systems-vm:~/Documents/project2-buzblink-sroblesher> cd project/
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf     p1_interrupt_handler.c
+blinkMain.c   README.md
+blinkMain.o   stateMachines.c
+buzzer.c      stateMachines.h
+buzzer.h      stateMachines.o
+buzzerMain.c  switches.c
+led.c         switches.h
+led.h         switches.o
+led.o         wdInterruptHandler.c
+Makefile      wdInterruptHandler.o
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> mv p1_interrupt_handler.c p2_interrupt_handler.c
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf     p2_interrupt_handler.c
+blinkMain.c   README.md
+blinkMain.o   stateMachines.c
+buzzer.c      stateMachines.h
+buzzer.h      stateMachines.o
+buzzerMain.c  switches.c
+led.c         switches.h
+led.h         switches.o
+led.o         wdInterruptHandler.c
+Makefile      wdInterruptHandler.o
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> cd ..
+student@systems-vm:~/Documents/project2-buzblink-sroblesher> cd demos/
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos> cd button_demo/
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> ls
+button.elf    p1_interrupt_handler.c
+buttonMain.c  p1_interrupt_handler.o
+buttonMain.o  README.md
+led.c         switches.c
+led.h         switches.h
+led.o         switches.o
+Makefile
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 894 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o button.elf p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> make load
+msp430loader.sh button.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  button.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f button.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 898 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos/button_demo> cd ..
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/demos> cd ..
+student@systems-vm:~/Documents/project2-buzblink-sroblesher> ls
+demos  hello.c  new_demos  README.md  timerLib
+h      lib      project    src
+student@systems-vm:~/Documents/project2-buzblink-sroblesher> cp -r ./demos/button_demo/p1_interrupt_handler.o ./project
+student@systems-vm:~/Documents/project2-buzblink-sroblesher> ls
+demos  hello.c  new_demos  README.md  timerLib
+h      lib      project    src
+student@systems-vm:~/Documents/project2-buzblink-sroblesher> cd project/
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf               p2_interrupt_handler.c
+blinkMain.c             README.md
+blinkMain.o             stateMachines.c
+buzzer.c                stateMachines.h
+buzzer.h                stateMachines.o
+buzzerMain.c            switches.c
+led.c                   switches.h
+led.h                   switches.o
+led.o                   wdInterruptHandler.c
+Makefile                wdInterruptHandler.o
+p1_interrupt_handler.o
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> mv p1_interrupt_handler.o p2_interrupt_handler.o 
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf               p2_interrupt_handler.o
+blinkMain.c             README.md
+blinkMain.o             stateMachines.c
+buzzer.c                stateMachines.h
+buzzer.h                stateMachines.o
+buzzerMain.c            switches.c
+led.c                   switches.h
+led.h                   switches.o
+led.o                   wdInterruptHandler.c
+Makefile                wdInterruptHandler.o
+p2_interrupt_handler.c
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 988 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf               p2_interrupt_handler.o
+blinkMain.c             README.md
+blinkMain.o             stateMachines.c
+buzzer.c                stateMachines.h
+buzzer.h                stateMachines.o
+buzzerMain.c            switches.c
+led.c                   switches.h
+led.h                   switches.o
+led.o                   wdInterruptHandler.c
+Makefile                wdInterruptHandler.o
+p2_interrupt_handler.c
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> rm buzzerMain.c 
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf               p2_interrupt_handler.o
+blinkMain.c             README.md
+blinkMain.o             stateMachines.c
+buzzer.c                stateMachines.h
+buzzer.h                stateMachines.o
+led.c                   switches.c
+led.h                   switches.h
+led.o                   switches.o
+Makefile                wdInterruptHandler.c
+p2_interrupt_handler.c  wdInterruptHandler.o
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 988 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf               p2_interrupt_handler.o
+blinkMain.c             README.md
+blinkMain.o             stateMachines.c
+buzzer.c                stateMachines.h
+buzzer.h                stateMachines.o
+led.c                   switches.c
+led.h                   switches.h
+led.o                   switches.o
+Makefile                wdInterruptHandler.c
+p2_interrupt_handler.c  wdInterruptHandler.o
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o blinkMain.o blinkMain.c
+blinkMain.c: In function 'main':
+blinkMain.c:10:3: warning: implicit declaration of function 'buzzer_init'; did you mean 'led_init'? [-Wimplicit-function-declaration]
+   buzzer_init();
+   ^~~~~~~~~~~
+   led_init
+blinkMain.c:11:3: warning: implicit declaration of function 'switch_init' [-Wimplicit-function-declaration]
+   switch_init();
+   ^~~~~~~~~~~
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o wdInterruptHandler.o ../lib/libTimer.a
+blinkMain.o: In function `main':
+blinkMain.c:(.text+0xa): undefined reference to `buzzer_init'
+blinkMain.c:(.text+0xe): undefined reference to `switch_init'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:15: blink.elf] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o blinkMain.o blinkMain.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o wdInterruptHandler.o ../lib/libTimer.a
+blinkMain.o: In function `main':
+blinkMain.c:(.text+0xa): undefined reference to `buzzer_init'
+blinkMain.c:(.text+0xe): undefined reference to `switch_init'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:15: blink.elf] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o wdInterruptHandler.o ../lib/libTimer.a
+blinkMain.o: In function `main':
+blinkMain.c:(.text+0xa): undefined reference to `buzzer_init'
+blinkMain.c:(.text+0xe): undefined reference to `switch_init'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:15: blink.elf] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+make: *** No rule to make target 'project.elf', needed by 'all'.  Stop.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o wdInterruptHandler.o ../lib/libTimer.a
+blinkMain.o: In function `main':
+blinkMain.c:(.text+0xa): undefined reference to `buzzer_init'
+blinkMain.c:(.text+0xe): undefined reference to `switch_init'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:15: blink.elf] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blinkMain.c             README.md
+blinkMain.o             stateMachines.c
+buzzer.c                stateMachines.h
+buzzer.h                stateMachines.o
+led.c                   switches.c
+led.h                   switches.h
+led.o                   switches.o
+Makefile                wdInterruptHandler.c
+p2_interrupt_handler.c  wdInterruptHandler.o
+p2_interrupt_handler.o
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   ../h/clocksTimer.h
+	new file:   ../h/libTimer.h
+	new file:   ../h/sr.h
+	new file:   ../lib/libTimer.a
+	new file:   ../new_demos/Makefile
+	new file:   ../new_demos/README.md
+	new file:   ../new_demos/blink_demo/Makefile
+	new file:   ../new_demos/blink_demo/README.md
+	new file:   ../new_demos/blink_demo/blink.elf
+	new file:   ../new_demos/blink_demo/blinkMain.c
+	new file:   ../new_demos/blink_demo/blinkMain.o
+	new file:   ../new_demos/blink_demo/led.c
+	new file:   ../new_demos/blink_demo/led.h
+	new file:   ../new_demos/blink_demo/led.o
+	new file:   ../new_demos/blink_demo/myStateMachines.c
+	new file:   ../new_demos/blink_demo/src/stateMachines.c
+	new file:   ../new_demos/blink_demo/stateMachines.c
+	new file:   ../new_demos/blink_demo/stateMachines.h
+	new file:   ../new_demos/blink_demo/stateMachines.o
+	new file:   ../new_demos/blink_demo/wdInterruptHandler.c
+	new file:   ../new_demos/blink_demo/wdInterruptHandler.o
+	new file:   ../new_demos/button_demo/Makefile
+	new file:   ../new_demos/button_demo/README.md
+	new file:   ../new_demos/button_demo/button.elf
+	new file:   ../new_demos/button_demo/buttonMain.c
+	new file:   ../new_demos/button_demo/buttonMain.o
+	new file:   ../new_demos/button_demo/led.c
+	new file:   ../new_demos/button_demo/led.h
+	new file:   ../new_demos/button_demo/led.o
+	new file:   ../new_demos/button_demo/p1_interrupt_handler.c
+	new file:   ../new_demos/button_demo/p1_interrupt_handler.o
+	new file:   ../new_demos/button_demo/switches.c
+	new file:   ../new_demos/button_demo/switches.h
+	new file:   ../new_demos/button_demo/switches.o
+	new file:   ../new_demos/buzzer_demo/Makefile
+	new file:   ../new_demos/buzzer_demo/README.md
+	new file:   ../new_demos/buzzer_demo/buzzer.c
+	new file:   ../new_demos/buzzer_demo/buzzer.elf
+	new file:   ../new_demos/buzzer_demo/buzzer.h
+	new file:   ../new_demos/buzzer_demo/buzzer.o
+	new file:   ../new_demos/buzzer_demo/buzzerMain.c
+	new file:   ../new_demos/buzzer_demo/buzzerMain.o
+	new file:   ../new_demos/h/clocksTimer.h
+	new file:   ../new_demos/h/libTimer.h
+	new file:   ../new_demos/h/sr.h
+	new file:   ../new_demos/lib/libTimer.a
+	new file:   ../new_demos/siren_demo/Makefile
+	new file:   ../new_demos/siren_demo/README.md
+	new file:   ../new_demos/siren_demo/blink.elf
+	new file:   ../new_demos/siren_demo/blinkMain.c
+	new file:   ../new_demos/siren_demo/blinkMain.o
+	new file:   ../new_demos/siren_demo/led.c
+	new file:   ../new_demos/siren_demo/led.h
+	new file:   ../new_demos/siren_demo/led.o
+	new file:   ../new_demos/siren_demo/myStateMachines.c
+	new file:   ../new_demos/siren_demo/src/stateMachines.c
+	new file:   ../new_demos/siren_demo/stateMachines.c
+	new file:   ../new_demos/siren_demo/stateMachines.h
+	new file:   ../new_demos/siren_demo/stateMachines.o
+	new file:   ../new_demos/siren_demo/wdInterruptHandler.c
+	new file:   ../new_demos/siren_demo/wdInterruptHandler.o
+	new file:   ../new_demos/timerLib/Makefile
+	new file:   ../new_demos/timerLib/clocksTimer.c
+	new file:   ../new_demos/timerLib/clocksTimer.h
+	new file:   ../new_demos/timerLib/clocksTimer.o
+	new file:   ../new_demos/timerLib/libTimer.h
+	new file:   ../new_demos/timerLib/sr.h
+	new file:   ../new_demos/timerLib/sr.o
+	new file:   ../new_demos/timerLib/sr.s
+	new file:   Makefile
+	new file:   blink.elf
+	new file:   blinkMain.c
+	new file:   blinkMain.o
+	new file:   buzzer.c
+	new file:   buzzer.h
+	new file:   buzzerMain.c
+	new file:   led.c
+	new file:   led.h
+	new file:   led.o
+	new file:   stateMachines.c
+	new file:   stateMachines.h
+	new file:   stateMachines.o
+	new file:   switches.c
+	new file:   switches.h
+	new file:   switches.o
+	new file:   wdInterruptHandler.c
+	new file:   wdInterruptHandler.o
+	new file:   ../timerLib/Makefile
+	new file:   ../timerLib/clocksTimer.c
+	new file:   ../timerLib/clocksTimer.h
+	new file:   ../timerLib/clocksTimer.o
+	new file:   ../timerLib/libTimer.h
+	new file:   ../timerLib/sr.h
+	new file:   ../timerLib/sr.o
+	new file:   ../timerLib/sr.s
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ../demos/blink_demo/led.h
+	modified:   ../demos/blink_demo/stateMachines.c
+	modified:   ../demos/blink_demo/wdInterruptHandler.c
+	modified:   ../demos/button_demo/led.c
+	modified:   ../demos/button_demo/led.h
+	modified:   ../demos/button_demo/p1_interrupt_handler.c
+	modified:   ../demos/button_demo/switches.c
+	modified:   ../demos/button_demo/switches.h
+	modified:   ../demos/buzzer_demo/buzzer.c
+	modified:   ../demos/buzzer_demo/buzzerMain.c
+	deleted:    blink.elf
+	modified:   blinkMain.c
+	modified:   blinkMain.o
+	deleted:    buzzerMain.c
+	modified:   switches.c
+	modified:   switches.h
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../demos/blink_demo/blink.elf
+	../demos/blink_demo/blinkMain.o
+	../demos/blink_demo/led.o
+	../demos/blink_demo/src/
+	../demos/blink_demo/stateMachines.o
+	../demos/blink_demo/wdInterruptHandler.o
+	../demos/button_demo/button.elf
+	../demos/button_demo/buttonMain.o
+	../demos/button_demo/led.o
+	../demos/button_demo/p1_interrupt_handler.o
+	../demos/button_demo/switches.o
+	../demos/buzzer_demo/buzzer.elf
+	../demos/buzzer_demo/buzzer.o
+	../demos/buzzer_demo/buzzerMain.o
+	../demos/h/
+	../demos/lib/
+	../demos/timerLib/clocksTimer.o
+	../demos/timerLib/sr.o
+	p2_interrupt_handler.c
+	p2_interrupt_handler.o
+
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blinkMain.c             README.md
+blinkMain.o             stateMachines.c
+buzzer.c                stateMachines.h
+buzzer.h                stateMachines.o
+led.c                   switches.c
+led.h                   switches.h
+led.o                   switches.o
+Makefile                wdInterruptHandler.c
+p2_interrupt_handler.c  wdInterruptHandler.o
+p2_interrupt_handler.o
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o buzzer.o buzzer.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1380 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o blinkMain.o blinkMain.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o wdInterruptHandler.o wdInterruptHandler.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o p2_interrupt_handler.o p2_interrupt_handler.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+No valid msp430 devices found! Are you sure the MSP430 is connected to the vm (check lsusb)? 
+make: *** [Makefile:18: load] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1414 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf               p2_interrupt_handler.o
+blinkMain.c             README.md
+blinkMain.o             stateMachines.c
+buzzer.c                stateMachines.h
+buzzer.h                stateMachines.o
+buzzer.o                switches.c
+led.c                   switches.h
+led.h                   switches.o
+led.o                   wdInterruptHandler.c
+Makefile                wdInterruptHandler.o
+p2_interrupt_handler.c
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+stateMachines.c: In function 'state_advance':
+stateMachines.c:69:7: error: 'state' undeclared (first use in this function)
+   if (state == 1) {
+       ^~~~~
+stateMachines.c:69:7: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [<builtin>: stateMachines.o] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf               p2_interrupt_handler.o
+blinkMain.c             README.md
+blinkMain.o             stateMachines.c
+buzzer.c                stateMachines.h
+buzzer.h                stateMachines.o
+buzzer.o                switches.c
+led.c                   switches.h
+led.h                   switches.o
+led.o                   wdInterruptHandler.c
+Makefile                wdInterruptHandler.o
+p2_interrupt_handler.c
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> ls
+blink.elf               p2_interrupt_handler.o
+blinkMain.c             README.md
+blinkMain.o             stateMachines.c
+buzzer.c                stateMachines.h
+buzzer.h                stateMachines.o
+buzzer.o                switches.c
+led.c                   switches.h
+led.h                   switches.o
+led.o                   wdInterruptHandler.c
+Makefile                wdInterruptHandler.o
+p2_interrupt_handler.c
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o blinkMain.o blinkMain.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+stateMachines.c:27:6: error: conflicting types for 'first_state'
+ char first_state()
+      ^~~~~~~~~~~
+In file included from stateMachines.c:2:
+stateMachines.h:4:6: note: previous declaration of 'first_state' was here
+ void first_state();
+      ^~~~~~~~~~~
+stateMachines.c: In function 'state_advance':
+stateMachines.c:69:7: error: 'state' undeclared (first use in this function)
+   if (state == 1) {
+       ^~~~~
+stateMachines.c:69:7: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [<builtin>: stateMachines.o] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+stateMachines.c:29:6: error: conflicting types for 'first_state'
+ char first_state()
+      ^~~~~~~~~~~
+In file included from stateMachines.c:2:
+stateMachines.h:4:6: note: previous declaration of 'first_state' was here
+ void first_state();
+      ^~~~~~~~~~~
+stateMachines.c:67:6: error: conflicting types for 'state_advance'
+ void state_advance()  /* alternate between toggling red & green */
+      ^~~~~~~~~~~~~
+In file included from stateMachines.c:2:
+stateMachines.h:5:6: note: previous declaration of 'state_advance' was here
+ char state_advance();
+      ^~~~~~~~~~~~~
+make: *** [<builtin>: stateMachines.o] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o wdInterruptHandler.o wdInterruptHandler.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o p2_interrupt_handler.o p2_interrupt_handler.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+No valid msp430 devices found! Are you sure the MSP430 is connected to the vm (check lsusb)? 
+make: *** [Makefile:18: load] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1422 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1422 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1500 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> 
+bash: syntax error near unexpected token `newline'
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o wdInterruptHandler.o wdInterruptHandler.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+No valid msp430 devices found! Are you sure the MSP430 is connected to the vm (check lsusb)? 
+make: *** [Makefile:18: load] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1558 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1654 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1654 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+make: Nothing to be done for 'all'.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1654 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o wdInterruptHandler.o wdInterruptHandler.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1744 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1790 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1790 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1790 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2002 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2254 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2254 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2254 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o wdInterruptHandler.o wdInterruptHandler.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2622 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2622 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+stateMachines.c: In function 'state_advance':
+stateMachines.c:175:12: error: expected ';' before 'if'
+   count = 0
+            ^
+            ;
+   if (state == 1) {
+   ~~        
+make: *** [<builtin>: stateMachines.o] Error 1
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2626 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make all
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include -o blink.elf blinkMain.o stateMachines.o led.o buzzer.o switches.o wdInterruptHandler.o p2_interrupt_handler.o ../lib/libTimer.a
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> make load
+msp430loader.sh blink.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  blink.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f blink.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2622 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/Documents/project2-buzblink-sroblesher/project> 
