@@ -16,8 +16,13 @@ main()
 
   clearScreen(COLOR_BLUE);
 
-  drawString5x7(20,20, "hello", COLOR_GREEN, COLOR_RED);
+  drawString5x7(20,20, "hello 1", COLOR_GREEN, COLOR_RED);
 
-  fillRectangle(30,30, 60, 60, COLOR_ORANGE);
+  drawString8x12(20,50, "hello 2", COLOR_GREEN, COLOR_RED);
+
+  drawString11x16(20,80, "hello 3", COLOR_GREEN, COLOR_RED);
+
+  
+  // fillRectangle(30,30, 60, 60, COLOR_ORANGE);
   
 }
