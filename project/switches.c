@@ -4,7 +4,7 @@
 #include "stateMachines.h"
 
 char switch_state_down, switch_state_changed; /* effectively boolean */
-int state;
+int button_state;
 
 static char 
 switch_update_interrupt_sense()
@@ -35,8 +35,9 @@ switch_interrupt_handler()
   //switch_state_changed = switch_state_down;
   //  led_update();
 
-  if ((p2val & SW1)==0) state = 1;
-  else if ((p2val & SW2)==0) state = 2;
-  else if ((p2val & SW3)==0) state = 3;
-  else if ((p2val & SW4)==0) state = 4;
+  if ((p2val & SW1)==0) button_state = 1;
+  else if ((p2val & SW2)==0) button_state = 2;
+  else if ((p2val & SW3)==0) button_state = 3;
+  else if ((p2val & SW4)==0) button_state = 4;
+  else button_state = 1;
 }

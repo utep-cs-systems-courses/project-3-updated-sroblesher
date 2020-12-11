@@ -182,6 +182,7 @@ char fourth_state()
   count += 1;
   return 1;
 }
+
 int state4 = 1;
 char fourth_state_1()
 {
@@ -253,18 +254,21 @@ void state_advance()		/* alternate between toggling red & green */
 {
   char changed = 0;  
   
-  if (state == 1) {
+  if (button_state == 1) {
     changed = first_state();
   }
-  if (state == 2) {
+  if (button_state == 2) {
     changed = second_state();
   }
-  if (state == 3) {
+  if (button_state == 3) {
     changed = third_state();
   }
-  if (state == 4) {
+  if (button_state == 4) {
     changed = fourth_state();
   }
+  //else {
+    // chagned = first_state();
+    //  }
 
   led_changed = changed;
   led_update();
