@@ -3,9 +3,8 @@
 
 char first_state();
 char second_state();
-char third_state();
-char fourth_state();
+char new_third_state();
+char new_fourth_state();
 void state_advance();
-
 
 #endif // included

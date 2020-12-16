@@ -1,275 +1,208 @@
 #include <msp430.h>
-#include "stateMachines.h"
+#include <libTimer.h>
+#include "lcdutils.h"
+#include "lcddraw.h"
 #include "led.h"
 #include "buzzer.h"
 #include "switches.h"
+#include "stateMachines.h"
 
 static int dim = 0;
 static int count = 0;
+static int state1Count = 0;
+static int state2Count = 0;
+static int state3Count = 0;
+static int state4Count = 0;
+static int dimsCount = 0;
 
-char toggle_red2()		/* always toggle! */
+//100% luminosity
+void dim1()
 {
-  static char state = 0;
-
-  switch (dim) {
-  case 0:
-    red_on = 1;
-    dim = 1;
-    return 1;
-    break;
-  case 1:
-    red_on = 0;
-    dim = 0;
-    return 0;
-    break;
-  }
-  return 1;             /* always changes an led */
+  //red_on = 1;
+  //led_changed = 1;
+   redLedOn();  //Using assembly
+  led_update();
 }
 
-char first_state() /* Dims red light and mantains green led on */
+//25% luminosity
+void dim2()
 {
-  if (count == 5000) {
-    count = 0;
-  }
-  if (count < 1000) {
+  if (state1Count % 4 == 0)
     red_on = 1;
-    green_on = 1;
-  }
-  else if (count < 2000 && count % 2 == 0){
-    red_on = 1;
-  }
-  else if (count < 3000 && count % 4 == 0){
-    red_on = 1;
-  }   
-  else if (count < 4000 && count % 6 == 0){
-    red_on = 1;
-  } 
-  else if (count < 5000 && count % 8 == 0){
-    red_on = 1;
-  }
   else red_on = 0;
-
-  count += 1;
-  return 1;
+  //dimsCount++;
+  led_changed = 1;
+  led_update;
 }
-int state1 = 0;
-int state11 = 0;
-char first_state_1()
+
+//12.5% luminosity
+void dim3()
 {
-  //state11++;
-  //if (state11 < 125) state1 = 1;
-  // else state1 = 2;
-  //  state1 = blink_count_1;
-  switch(state1)
+  //if (dimsCount > 2000) dimsCount = 0;
+  if (state1Count % 8 == 0)
+    red_on = 1;
+  else red_on = 0;
+  //dimsCount++;
+  led_changed = 1;
+  led_update;
+}
+
+
+char new_first_state()
+{
+  //Select what luminosity to display
+  int countFS;
+  if(state1Count <= 1000) countFS = 1;
+  else if(state1Count <= 2000) countFS = 2;
+  else if(state1Count <= 3000) countFS = 3;
+  else {
+    state1Count = 0;
+    countFS = 1;
+  }
+  
+  switch(countFS)
   {
     case 1:
-      red_on = 1;
-      green_on = 0;
-      state1 = 2;
+      dim1();  //All luminosity
       break;
     case 2:
-      red_on = 0;
-      green_on = 1;
-      state1 = 3;
+      dim2();  //25%
+      break;
+    case 3:
+      dim3();  //12.5%
       break;
     default:
       red_on = 0;
-      green_on = 0;
-      state1 = 1;
+      state1Count = 1;
       break;
   }
+  state1Count++;
+  led_changed = 1;
+  led_update();
 }
 
+
+//Defectuous button
 char second_state()
-{
-  if (count == 1100) {
-    count = 0;
-  }
-  if (count < 125) {
-    red_on = 1;
-    green_on = 1;
-  }
-  else if (count < 250) {
-    red_on = 0;
-    green_on = 1;
-  }
-  else if (count < 375) {
-    red_on = 1;
-    green_on = 1;
-  }
-  else if (count < 500) {
-    red_on = 0;
-    green_on = 0;  
-  }
-  else if (count < 625) {
-    red_on = 1;
-    green_on = 1;
-  }
-  else if (count < 750) {
-    red_on = 1;
-    green_on = 0;
-  }
-  else if (count < 875) {
-    red_on = 1;
-    green_on = 1;
-  }
-  else if (count < 1000) {
-    red_on = 0;
-    green_on = 0;  
-  }
-
-  
+{  
   count += 1;
   return 1;
 }
 
-char third_state()
+//Dragon Ball GT song
+char new_third_state()
 {
-  if (count == 2550) {
-    buzzer_set_period(0);
-    count = 0;
-  }
-  if (count < 125) buzzer_set_period(5102);
-  else if (count < 200) buzzer_set_period(0);
-  else if (count < 325) buzzer_set_period(5102);
-  else if (count < 400) buzzer_set_period(0);
-  else if (count < 525) buzzer_set_period(6079);
-  else if (count < 600) buzzer_set_period(0);
-  else if (count < 725) buzzer_set_period(5730);
-  else if (count < 800) buzzer_set_period(0);
-  else if (count < 925) buzzer_set_period(5102);
-  else if (count <1000) buzzer_set_period(0);
-  else if (count <1125) buzzer_set_period(4545);
-  else if (count <1200) buzzer_set_period(0);
-  else if (count <1325) buzzer_set_period(5102);
-  else if (count <1400) buzzer_set_period(0);
-  else if (count <1525) buzzer_set_period(5730);
-  
-  else if (count <1600) buzzer_set_period(0);
-  else if (count <1725) buzzer_set_period(6079);
-  else if (count <1800) buzzer_set_period(0);
-  else if (count <1950) buzzer_set_period(6825);
-  else if (count <2025) buzzer_set_period(0);
-  else if (count <2150) buzzer_set_period(6079);
-  else if (count <2225) buzzer_set_period(0);
-  else if (count <2350) buzzer_set_period(6079);
-  else if (count <2550) buzzer_set_period(0);
-  count += 1;
+  switch(state3Count)
+    {
+    case 0:
+    case 2:
+    case 4:
+    case 6:
+    case 8:
+    case 10:
+    case 12:
+    case 14:
+    case 16:
+    case 18:
+    case 20:
+    case 22:
+    case 24:
+      buzzer_set_period(0);
+      break;
+    case 1:
+    case 3:
+      buzzer_set_period(5102);
+      break;
+    case 5:
+    case 17:
+    case 21:
+    case 23:
+      buzzer_set_period(6079);
+      break;
+    case 7:
+    case 15:
+      buzzer_set_period(5730);
+      break;
+    case 9:
+    case 13:
+      buzzer_set_period(5102);
+      break;
+    case 11:
+      buzzer_set_period(4545);
+      break;
+    case 19:
+      buzzer_set_period(6825);
+      break;
+    default:
+      buzzer_set_period(0);  //Return to first position and note
+      state3Count = 0;
+      break;
+    }
+  state3Count++;
   return 1;
 }
 
-char fourth_state()
+//Saint Seiya song
+char new_fourth_state()
 {
-
-  if (count == 2550) {
-    buzzer_set_period(0);
-    count = 0;
+  switch(state4Count)
+    {
+    case 0:
+    case 2:
+    case 4:
+    case 6:
+    case 8:
+    case 10:
+    case 12:
+    case 14:
+      buzzer_set_period(0);
+      break;
+    case 1:
+      buzzer_set_period(6079);
+      break;
+    case 3:
+    case 9:
+      buzzer_set_period(5405);
+      break;
+    case 5:
+      buzzer_set_period(4545);
+      break;
+    case 7:
+    case 11:
+      buzzer_set_period(5102);
+      break;
+    case 13:
+      buzzer_set_period(8132);
+      break;
+    default:
+      buzzer_set_period(0);
+      state4Count = 0; //Return to first position and note
+      break;
   }
-  if (count < 125) buzzer_set_period(6079);
-  else if (count < 200) buzzer_set_period(0);
-  else if (count < 325) buzzer_set_period(5405);
-  else if (count < 400) buzzer_set_period(0);
-  else if (count < 525) buzzer_set_period(4545);
-  else if (count < 600) buzzer_set_period(0);
-  else if (count < 725) buzzer_set_period(5102);
-  else if (count < 800) buzzer_set_period(0);
-  else if (count < 925) buzzer_set_period(5405);
-  else if (count <1000) buzzer_set_period(0);
-  else if (count <1125) buzzer_set_period(5102);
-  else if (count <1200) buzzer_set_period(0);
-  else if (count <1425) buzzer_set_period(8132);
-  else if (count <1650) buzzer_set_period(0);
-  count += 1;
+  state4Count++;
   return 1;
 }
 
-int state4 = 1;
-char fourth_state_1()
-{
-  switch(state4)
-  {
-  case 1:
-   buzzer_set_period(6079);
-   break;
-  case 2:
-   buzzer_set_period(0);
-   break;
-  case 3:
-   buzzer_set_period(5405);
-   break;
-  case 4:
-    buzzer_set_period(0);
-    break;
-  case 5:
-    buzzer_set_period(4545);
-    break;
-  case 6:
-    buzzer_set_period(0);
-    break;
-  case 7:
-    buzzer_set_period(5102);
-    break;
-  case 8:
-    buzzer_set_period(0);
-    break;
-  case 9:
-    buzzer_set_period(5405);
-    break;
-  case 10:
-    buzzer_set_period(0);
-    break;
-  case 11:
-    buzzer_set_period(5102);
-    break;
-  case 12:
-    buzzer_set_period(0);
-    break;
-  case 13:
-    buzzer_set_period(8132);
-    break;
-  case 14:
-    buzzer_set_period(0);
-    state4 = 0;
-    break;
-  default:
-    buzzer_set_period(8132);
-    break;
-  }
-  state4++;
-  return 1;
-}
-
-char toggle_green()	/* only toggle green if red is on!  */
+//Passed to assembly
+/*
+void state_advance()	
 {
   char changed = 0;
-  if (red_on) {
-    green_on ^= 1;
-    changed = 1;
-  }
-  return changed;
-}
 
-
-void state_advance()		/* alternate between toggling red & green */
-{
-  char changed = 0;  
-  
-  if (button_state == 1) {
-    changed = first_state();
+  if (state == 1) {
+    changed = new_first_state();
   }
-  if (button_state == 2) {
+  if (state == 2) {
     changed = second_state();
   }
-  if (button_state == 3) {
-    changed = third_state();
+  if (state == 3) {
+    changed = new_third_state();
   }
-  if (button_state == 4) {
-    changed = fourth_state();
+  if (state == 4) {
+    changed = new_fourth_state();
   }
-  //else {
-    // chagned = first_state();
-    //  }
 
   led_changed = changed;
   led_update();
 }
+*/
